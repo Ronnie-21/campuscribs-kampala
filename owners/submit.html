@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Hostel Listing | CampusCribs Kampala</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../images/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <!-- MASTER NAVIGATION -->
+    <header>
+        <div class="logo"><div class="logo">CampusCribs Kampala</div></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../hostels/index.html">Find a Hostel</a></li>
+                <li><a href="index.html">List Your Hostel</a></li>
+                <li><a href="../about.html">About Us</a></li>
+                <li><a href="../faq.html">FAQ</a></li>
+                <li><a href="../contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENT AREA -->
+    <main class="hostel-details-container">
+        <section style="max-width: 650px; margin: 0 auto; background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+            <h1 style="color: #0f2a5c; text-align: center; margin-bottom: 10px;">Submit Your Hostel Listing</h1>
+            <p style="text-align: center; color: #555; margin-bottom: 25px; font-size: 14px;">Fill out the details below to list your property for Victoria University students. Listings are checked by admin before publishing.</p>
+            
+            <form action="manage.html" method="POST" enctype="multipart/form-data">
+                
+                <div style="margin-bottom: 15px; text-align: left;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 5px;">Hostel Name <span>*</span></label>
+                    <input type="text" name="hostel_name" required placeholder="e.g. University Courts" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+                </div>
+
+                <div style="margin-bottom: 15px; text-align: left;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 5px;">Owner / Manager Full Name <span>*</span></label>
+                    <input type="text" name="owner_name" required placeholder="e.g. John Mukasa" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+                </div>
+
+                <div style="margin-bottom: 15px; text-align: left;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 5px;">Contact Phone Number (Calls / WhatsApp) <span>*</span></label>
+                    <input type="tel" name="phone" required placeholder="e.g. +256 700 000000" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+                </div>
+
+                <div style="margin-bottom: 15px; text-align: left;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 5px;">Location / Street <span>*</span></label>
+                    <input type="text" name="location" required placeholder="e.g. Nakawa, near Kataza Road" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+                </div>
+
+                <div style="margin-bottom: 15px; text-align: left;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 5px;">Room Types & Price Range (UGX per Semester) <span>*</span></label>
+                    <textarea name="pricing_details" rows="3" required placeholder="e.g. Single room: 1,800,000 UGX, Shared room of 4: 1,500,000 UGX" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; font-family: inherit;"></textarea>
+                </div>
+
+                <div style="margin-bottom: 15px; text-align: left;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 5px;">Included Facilities & Amenities</label>
+                    <input type="text" name="amenities" placeholder="e.g. Wi-Fi, CCTV, 24/7 Security, Water, Electricity" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+                </div>
+
+                <div style="margin-bottom: 20px; text-align: left;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 5px;">Upload Hostel Photos</label>
+                    <input type="file" name="hostel_photos" multiple style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 6px; background: #f9fafb;">
+                    <small style="color: #666; font-size: 12px;">Upload clear pictures of rooms and exterior.</small>
+                </div>
+
+                <button type="submit" class="button" style="width: 100%; padding: 12px; cursor: pointer;">Submit Listing for Review →</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 CampusCribs Kampala | Group 9. All Rights Reserved.</p>
+
+        <p>
+            <a href="../contact.html">Contact Us</a> |
+            <a href="../privacy.html">Privacy Policy</a>
+        </p>
+    </footer>
+
+</body>
+</html>

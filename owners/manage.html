@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage My Listing | CampusCribs Kampala</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../images/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <!-- MASTER NAVIGATION -->
+    <header>
+        <div class="logo"><div class="logo">CampusCribs Kampala</div></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../hostels/index.html">Find a Hostel</a></li>
+                <li><a href="index.html">List Your Hostel</a></li>
+                <li><a href="../about.html">About Us</a></li>
+                <li><a href="../faq.html">FAQ</a></li>
+                <li><a href="../contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENT AREA -->
+    <main class="hostel-details-container">
+        <section style="max-width: 700px; margin: 0 auto; background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+            <h1 style="color: #0f2a5c; text-align: center; margin-bottom: 10px;">Manage My Listing</h1>
+            <p style="text-align: center; color: #555; margin-bottom: 25px; font-size: 14px;">Update your semester prices, change room availability statuses in real time, or specify when more rooms will become free.</p>
+            
+            <div style="background: #f0f5f9; padding: 15px; border-radius: 6px; margin-bottom: 25px; border-left: 4px solid #0f2a5c;">
+                <strong>Logged-in Property:</strong> University Courts (Nakawa) <br>
+                <span style="font-size: 13px; color: #555;">Status: Active & Verified</span>
+            </div>
+
+            <form action="manage.html" method="POST">
+                
+                <div style="margin-bottom: 20px; text-align: left;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 5px;">Current Room Availability Status <span>*</span></label>
+                    <select name="room_status" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; font-family: inherit;">
+                        <option value="" disabled selected>- select -</option>
+                        <option value="free">🟢 Rooms Free (Available)</option>
+                        <option value="full">🔴 Full (Waiting List Open)</option>
+                    </select>
+                </div>
+
+                <div style="margin-bottom: 20px; text-align: left;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 5px;">When will more rooms be free? (Optional)</label>
+                    <input type="text" name="free_date" placeholder="e.g. Next Semester / January 2027" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+                </div>
+
+                <div style="margin-bottom: 20px; text-align: left;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 5px;">Update Semester Pricing (UGX) <span>*</span></label>
+                    <textarea name="updated_pricing" rows="4" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; font-family: inherit;">Single Room: 2,000,000 UGX
+Shared Room (4 students): 1,500,000 UGX</textarea>
+                </div>
+
+                <div style="margin-bottom: 20px; text-align: left;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 5px;">Primary Contact Phone for Inquiries</label>
+                    <input type="tel" name="update_phone" value="+256 700 000000" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+                </div>
+
+                <button type="submit" class="button" style="width: 100%; padding: 12px; cursor: pointer;">Save Changes & Update Live Site →</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+       <p>&copy; 2026 CampusCribs Kampala | Group 9. All Rights Reserved.</p>
+
+        <p>
+            <a href="../contact.html">Contact Us</a> |
+            <a href="../privacy.html">Privacy Policy</a>
+        </p>
+    </footer>
+
+</body>
+</html>
