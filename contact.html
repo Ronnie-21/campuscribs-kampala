@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | CampusCribs Kampala</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header>
+    <div class="logo">CampusCribs Kampala</div>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-button">Menu</label>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hostels/index.html">Find a Hostel</a></li>
+        <li><a href="owners/index.html">List Your Hostel</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html" class="active">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Contact Us</h1>
+    <p class="lead">Have a question, a privacy concern, or found an error on our website? Fill in the form below and we
+      will get back to you.</p>
+  </header>
+
+  <!-- CONTENT AREA -->
+  <main class="container">
+    <div class="info">
+      <h2>Get In Touch</h2>
+      <p><b>Email:</b> hostelaccommodation@gmail.com</p>
+      <p><b>WhatsApp:</b> <a href="http://wa.me/256760940137" target="_blank" rel="noopener noreferrer">Chat with us on
+          WhatsApp</a></p>
+      <p><b>Location:</b> Kampala, Uganda</p>
+      <p><b>Working Hours:</b><br>Mon - Fri: 9:00 AM - 6:00 PM</p>
+      <p>We reply within 24 hours on working days.</p>
+    </div>
+
+    <form action="https://formsubmit.co/isaackisakye590@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New Contact Form Message">
+      <input type="hidden" name="_captcha" value="false">
+
+      <label>Full Name <span>*</span></label>
+      <input type="text" name="name" required placeholder="e.g. Nambalirwa Sharifah">
+
+      <label>Email Address <span>*</span></label>
+      <input type="email" name="email" required placeholder="e.g. you@example.com">
+
+      <label>Message Type <span>*</span></label>
+      <select name="message_type" id="type" required>
+        <option value="" disabled selected>- select a type -</option>
+        <option value="General Question">General Question</option>
+        <option value="Privacy Concern">Privacy Concern</option>
+        <option value="Report an Error / Bug">Report an Error / Bug</option>
+      </select>
+
+      <div id="errorSection" class="error-box">
+        <h3>⚠️ Error Reporting - Please help us fix it</h3>
+        <label>Where did the error happen?</label>
+        <input type="text" name="error_page" placeholder="e.g. Login page, Home page">
+
+        <label>What error did you see?</label>
+        <textarea name="error_details" rows="3" placeholder="What did you click? What message appeared?"></textarea>
+
+        <label>How urgent is it?</label>
+        <select name="urgency">
+          <option>Low - I can still use the site</option>
+          <option>Medium - Some part is not working</option>
+          <option>High - I cannot use the site at all</option>
+        </select>
+      </div>
+
+      <label>Your Message <span>*</span></label>
+      <textarea name="message" rows="5" required placeholder="Write your message here..."></textarea>
+
+      <p class="privacy-note">🔒 Your details are kept private. We only use them to reply to you. We do not share your
+        information with others.</p>
+
+      <button type="submit">Send Message →</button>
+    </form>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 CampusCribs Kampala | Group 9. All Rights Reserved.</p>
+
+    <p>
+      <a href="contact.html">Contact Us</a> |
+      <a href="privacy.html">Privacy Policy</a>
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById('type').addEventListener('change', function () {
+      document.getElementById('errorSection').style.display =
+        this.value === 'Report an Error / Bug' ? 'block' : 'none';
+    });
+  </script>
+
+</body>
+
+</html>
