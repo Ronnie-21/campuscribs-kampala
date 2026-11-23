@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner Log In | CampusCribs Kampala</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../images/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <!-- MASTER NAVIGATION -->
+    <header>
+        <div class="logo"><div class="logo">CampusCribs Kampala</div></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../hostels/index.html">Find a Hostel</a></li>
+                <li><a href="index.html">List Your Hostel</a></li>
+                <li><a href="../about.html">About Us</a></li>
+                <li><a href="../faq.html">FAQ</a></li>
+                <li><a href="../contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENT AREA -->
+    <main class="hostel-details-container">
+        <section style="max-width: 500px; margin: 0 auto; background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+            <h1 style="color: #0f2a5c; text-align: center; margin-bottom: 10px;">Owner Portal</h1>
+            <p style="text-align: center; color: #555; margin-bottom: 25px; font-size: 14px;">Log in to manage your property listings or sign up as a new hostel manager.</p>
+            
+            <form action="manage.html" method="POST">
+                <div style="margin-bottom: 15px; text-align: left;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 5px;">Email Address</label>
+                    <input type="email" name="email" required placeholder="owner@example.com" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+                </div>
+
+                <div style="margin-bottom: 15px; text-align: left;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 5px;">Password</label>
+                    <input type="password" name="password" required placeholder="Enter your password" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+                </div>
+
+                <button type="submit" class="button" style="width: 100%; padding: 12px; margin-top: 10px; cursor: pointer;">Log In to Dashboard</button>
+            </form>
+
+            <hr style="margin: 25px 0; border: 0; border-top: 1px solid #ddd;">
+
+            <div style="text-align: center; font-size: 14px;">
+                <p>New hostel owner?</p>
+                <a href="submit.html" style="color: #2563eb; font-weight: bold; text-decoration: none;">Register & Submit Your Hostel Listing →</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 CampusCribs Kampala | Group 9. All Rights Reserved.</p>
+
+        <p>
+            <a href="../contact.html">Contact Us</a> |
+            <a href="../privacy.html">Privacy Policy</a>
+        </p>
+    </footer>
+
+</body>
+</html>

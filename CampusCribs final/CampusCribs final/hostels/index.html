@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <title>Find A Hostel | CampusCribs Kampala</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- MASTER NAVIGATION -->
+    <header>
+        <div class="logo">CampusCribs Kampala</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="index.html" class="active">Find a Hostel</a></li>
+                <li><a href="../owners/index.html">List Your Hostel</a></li>
+                <li><a href="../about.html">About Us</a></li>
+                <li><a href="../faq.html">FAQ</a></li>
+                <li><a href="../contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENT AREA -->
+    <main class="hostel-details-container">
+        
+        <!-- SEARCH & FILTER SECTION (Assigned to Bamwesigye Ronnie) -->
+        <section class="filter-section">
+            <h2>Filter & Search All Hostels</h2>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search hostel name, location, or facility...">
+            </div>
+            <div class="filters">
+                <select id="locationFilter">
+                    <option value="">All Locations</option>
+                    <option value="nakawa">Nakawa</option>
+                    <option value="kataza">Kataza Road</option>
+                    <option value="port bell">Port Bell Road</option>
+                </select>
+
+                <select id="priceFilter">
+                    <option value="">All Prices</option>
+                    <option value="low">Below UGX 700,000</option>
+                    <option value="mid">UGX 700,000 - 799,999</option>
+                    <option value="high">UGX 800,000 & Above</option>
+                </select>
+
+                <select id="facilitiesFilter">
+                    <option value="">All Facilities</option>
+                    <option value="wifi">Wi-Fi</option>
+                    <option value="cctv">CCTV</option>
+                    <option value="security">Security</option>
+                    <option value="generator">Generator</option>
+                </select>
+
+                <button type="button" id="resetFilters" class="button" style="background-color: #64748b;">Reset</button>
+            </div>
+        </section>
+
+        <!-- ========================================================== -->
+        <!-- 1. UNIVERSITY COURTS WRAPPER                               -->
+        <!-- ========================================================== -->
+        <div id="university-courts" class="hostel-item-block" data-name="university courts" data-location="nakawa" data-price="700000" data-facilities="cctv security wifi">
+            <section>
+                <h1>University Courts</h1>
+                <p class="intro-text">
+                    Looking for comfortable and affordable student accommodation? We offer a welcoming environment with comfortable rooms, essential facilities, and convenient accommodation options designed to make student life easier.
+                </p>
+                <a class="button" href="#room-types">View Room Types & Fees</a>
+            </section>
+
+            <hr>
+
+            <section>
+                <h2>Facilities At The Hostel</h2>
+                <div class="gallery-grid facility-grid">
+                    <figure class="card">
+                        <img src="../images/imagescamera.jpg" alt="CCTV camera" class="facility-icon">
+                        <figcaption>CCTV</figcaption>
+                    </figure>
+                    <figure class="card">
+                        <img src="../images/imagessecurity.png" alt="Security badge" class="facility-icon">
+                        <figcaption>24/7 Security</figcaption>
+                    </figure>
+                    <figure class="card">
+                        <img src="../images/imagesudecl.jpg" alt="Electricity icon" class="facility-icon">
+                        <figcaption>All bills included</figcaption>
+                    </figure>
+                    <figure class="card">
+                        <img src="../images/new.png" alt="WiFi symbol" class="facility-icon">
+                        <figcaption>Free WiFi</figcaption>
+                    </figure>
+                    <figure class="card">
+                        <img src="../images/imagestvv.jpg" alt="Television" class="facility-icon">
+                        <figcaption>TV Licence included</figcaption>
+                    </figure>
+                    <figure class="card">
+                        <img src="../images/images.png" alt="Breakfast icon" class="facility-icon">
+                        <figcaption>Breakfast</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <hr>
+
+            <section>
+                <h2>Meals & Services</h2>
+                <p class="intro-text">
+                    Residents may subscribe to affordable meal plans at the University Cafeteria. Laundry services are available through approved vendors near campus.
+                </p>
+
+                <h3>Why Choose Us?</h3>
+                <ul class="benefits-list">
+                    <li>24/7 Security and gated access</li>
+                    <li>Clean water and electricity backup</li>
+                    <li>Quiet study-friendly environment</li>
+                    <li>Access to campus Wi-Fi</li>
+                </ul>
+
+                <h3 id="room-types">HOSTEL IMAGES</h3>
+                <div class="gallery-grid">
+                    <figure class="card">
+                        <img src="../images/images2.jpg" alt="Single room with two beds" class="room-img">
+                        <figcaption>Single room with two beds.</figcaption>
+                    </figure>
+                    <figure class="card">
+                        <img src="../images/images3.jpg" alt="Shared room with 3 beds" class="room-img">
+                        <figcaption>Shared room with 3 beds.</figcaption>
+                    </figure>
+                    <figure class="card">
+                        <img src="../images/images4%20beds.jpg" alt="Shared room with four beds" class="room-img">
+                        <figcaption>Shared room with four beds.</figcaption>
+                    </figure>
+                    <figure class="card">
+                        <img src="../images/images16beds.jpg" alt="Shared room with 6 to 8 beds" class="room-img">
+                        <figcaption>Shared room with 6-8 beds.</figcaption>
+                    </figure>
+                </div>
+                
+                <table class="fee-table">
+                    <caption>Hostel Accommodation Fees (Per Semester)</caption>
+                    <thead>
+                        <tr>
+                            <th>Room Type</th>
+                            <th>Fee (UGX)</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Shared room of 4 students</td>
+                            <td>700,000</td>
+                            <td>Double-decker beds</td>
+                        </tr>
+                        <tr>
+                            <td>Shared room of 6-8 students</td>
+                            <td>450,000</td>
+                            <td>Double-decker beds</td>
+                        </tr>
+                        <tr>
+                            <td>Shared room of 10-16 students</td>
+                            <td>200,000</td>
+                            <td>Double-decker beds</td>
+                        </tr>
+                        <tr>
+                            <td>Single Room</td>
+                            <td>1,400,000</td>
+                            <td>One bed</td>
+                        </tr>
+                        <tr>
+                            <td>Single Room</td>
+                            <td>900,000</td>
+                            <td>Two beds</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="margin-top: 20px;">
+                    <a href="contact%20owner.html" class="button" style="background-color: #0f2a5c;">Inquire / Contact Owner for This Hostel</a>
+                </div>
+            </section>
+            
+            <hr style="border-top: 3px solid #2563eb; margin: 50px 0;">
+        </div>
+        
+        <!-- ========================================================== -->
+        <!-- 2. LAXY COURTS WRAPPER                                     -->
+        <!-- ========================================================== -->
+        <div id="laxy-courts" class="hostel-item-block" data-name="laxy courts" data-location="kataza" data-price="650000" data-facilities="wifi security water">
+            <section>
+                <h1>Laxy Courts</h1>
+                <p class="intro-text">
+                    Located conveniently along Kataza Road, Laxy Courts provides a vibrant community atmosphere tailored for students looking for proximity to campus, reliable study spaces, and flexible payment terms.
+                </p>
+                <a class="button" href="#lc-rooms">View Room Types & Fees</a>
+            </section>
+
+            <hr>
+
+            <section>
+                <h2>Facilities At Laxy Courts</h2>
+                <div class="gallery-grid facility-grid">
+                    <figure class="card">
+                        <img src="../images/imagessecurity.png" alt="Security guard" class="facility-icon">
+                        <figcaption>24/7 Security</figcaption>
+                    </figure>
+                    <figure class="card">
+                        <img src="../images/new.png" alt="High speed WiFi" class="facility-icon">
+                        <figcaption>High-Speed Wi-Fi</figcaption>
+                    </figure>
+                    <figure class="card">
+                        <img src="../images/imagesudecl.jpg" alt="Water reserve tank" class="facility-icon">
+                        <figcaption>All bills included</figcaption>
+                    </figure>
+                    <figure class="card">
+                        <img src="../images/images.png" alt="Kitchenette" class="facility-icon">
+                        <figcaption>Shared Kitchens</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <hr>
+
+            <section>
+                <h2>Meals & Services</h2>
+                <p class="intro-text">
+                    Weekly garbage collection and common area cleaning included in service fee.
+                </p>
+
+                <h3>Why Choose Laxy Courts?</h3>
+                <ul class="benefits-list">
+                    <li>Shorter walking distance to roadside transport</li>
+                    <li>Friendly student management team</li>
+                    <li>Flexible installment payment options</li>
+                </ul>
+
+                <h3 id="lc-rooms">LAXY COURTS IMAGES</h3>
+                <div class="gallery-grid">
+                    <figure class="card">
+                        <img src="../images/images2.jpg" alt="Twin sharing room layout" class="room-img">
+                        <figcaption>Twin Sharing Room layout.</figcaption>
+                    </figure>
+                    <figure class="card">
+                        <img src="../images/executive%20single%20room" alt="Executive single room" class="room-img">
+                        <figcaption>Executive Single Room.</figcaption>
+                    </figure>
+                </div>
+                
+                <table class="fee-table">
+                    <caption>Laxy Courts Fees (Per Semester)</caption>
+                    <thead>
+                        <tr>
+                            <th>Room Type</th>
+                            <th>Fee (UGX)</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Twin Sharing Room</td>
+                            <td>1,300,000</td>
+                            <td>Includes mattress & study desk</td>
+                        </tr>
+                        <tr>
+                            <td>Triple Sharing Room</td>
+                            <td>650,000</td>
+                            <td>Spacious well-ventilated rooms</td>
+                        </tr>
+                        <tr>
+                            <td>Executive Single Room</td>
+                            <td>1,900,000</td>
+                            <td>Private balcony attached</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="margin-top: 20px;">
+                    <a href="contact%20owner.html" class="button" style="background-color: #0f2a5c;">Inquire / Contact Owner for This Hostel</a>
+                </div>
+            </section>
+
+            <hr style="border-top: 3px solid #2563eb; margin: 50px 0;">
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- 3. BIKO HOSTEL WRAPPER                                     -->
+        <!-- ========================================================== -->
+        <div id="biko-hostel" class="hostel-item-block" data-name="biko hostel" data-location="port bell" data-price="800000" data-facilities="cctv security generator wifi">
+            <section>
+                <h1>Biko Hostel</h1>
+                <p class="intro-text">
+                    Situated prominently along Port Bell Road, Biko Hostel delivers modern architectural standards, premium security features, and pristine environment configurations designed for academic focus.
+                </p>
+                <a class="button" href="#biko-rooms">View Room Types & Fees</a>
+            </section>
+
+            <hr>
+
+            <section>
+                <h2>Facilities At Biko Hostel</h2>
+                <div class="gallery-grid facility-grid">
+                    <figure class="card">
+                        <img src="../images/imagescamera.jpg" alt="HD CCTV system" class="facility-icon">
+                        <figcaption>CCTV</figcaption>
+                    </figure>
+                    <figure class="card">
+                        <img src="../images/imagessecurity.png" alt="Biometric gate" class="facility-icon">
+                        <figcaption>24/7 Security</figcaption>
+                    </figure>
+                    <figure class="card">
+                        <img src="../images/imagesudecl.jpg" alt="Backup generator" class="facility-icon">
+                        <figcaption>All bills included</figcaption>
+                    </figure>
+                    <figure class="card">
+                        <img src="../images/new.png" alt="Fiber internet" class="facility-icon">
+                        <figcaption>Free WiFi</figcaption>
+                    </figure>
+                    <figure class="card">
+                        <img src="../images/imagestvv.jpg" alt="DSTV lounge" class="facility-icon">
+                        <figcaption>DSTV Common Lounge</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <hr>
+
+            <section>
+                <h2>Meals & Services</h2>
+                <p class="intro-text">
+                    Full cafeteria services available on ground floor operating breakfast, lunch, and dinner. Professional laundry services stationed on block B.
+                </p>
+
+                <h3>Why Choose Biko Hostel?</h3>
+                <ul class="benefits-list">
+                    <li>Uninterrupted power supply via generator backup</li>
+                    <li>Strict visitor verification security protocols</li>
+                    <li>Paved parking yard and relaxation gardens</li>
+                </ul>
+
+                <h3 id="biko-rooms">BIKO HOSTEL IMAGES</h3>
+                <div class="gallery-grid">
+                    <figure class="card">
+                        <img src="../images/quadruple%20sharing%20room.webp" alt="Quadruple room view" class="room-img">
+                        <figcaption>Quadruple Sharing Room.</figcaption>
+                    </figure>
+                    <figure class="card">
+                        <img src="../images/self%20contained%20single%20room" alt="Self contained single room" class="room-img">
+                        <figcaption>Self-Contained Single Room.</figcaption>
+                    </figure>
+                </div>
+                
+                <table class="fee-table">
+                    <caption>Biko Hostel Fees (Per Semester)</caption>
+                    <thead>
+                        <tr>
+                            <th>Room Type</th>
+                            <th>Fee (UGX)</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Standard Double Room</td>
+                            <td>1,200,000</td>
+                            <td>Ensuite bathroom option available</td>
+                        </tr>
+                        <tr>
+                            <td>Quadruple Sharing</td>
+                            <td>800,000</td>
+                            <td>Individual lockers provided</td>
+                        </tr>
+                        <tr>
+                            <td>Self-Contained Single</td>
+                            <td>2,200,000</td>
+                            <td>Private shower and kitchenette</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="margin-top: 20px;">
+                    <a href="contact%20owner.html" class="button" style="background-color: #0f2a5c;">Inquire / Contact Owner for This Hostel</a>
+                </div>
+            </section>
+        </div>
+        
+        <p id="noResults" style="text-align: center; font-weight: bold; color: #dc2626; margin-top: 30px;" hidden>
+            No hostels match your selected filter criteria. Click "Reset" to view all hostels.
+        </p>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 CampusCribs Kampala | Group 9. All Rights Reserved.</p>
+        <p>
+            <a href="../contact.html">Contact Us</a> |
+            <a href="../privacy.html">Privacy Policy</a>
+        </p>
+    </footer>
+
+    <!-- FILTER SCRIPT FOR FIND A HOSTEL PAGE -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const searchInput = document.getElementById("searchInput");
+            const locationFilter = document.getElementById("locationFilter");
+            const priceFilter = document.getElementById("priceFilter");
+            const facilitiesFilter = document.getElementById("facilitiesFilter");
+            const resetBtn = document.getElementById("resetFilters");
+            const hostelBlocks = document.querySelectorAll(".hostel-item-block");
+            const noResults = document.getElementById("noResults");
+
+            function filterHostels() {
+                const searchValue = searchInput.value.toLowerCase().trim();
+                const selectedLocation = locationFilter.value.toLowerCase();
+                const selectedPrice = priceFilter.value;
+                const selectedFacility = facilitiesFilter.value.toLowerCase();
+
+                let visibleCount = 0;
+
+                hostelBlocks.forEach(function (block) {
+                    const name = (block.dataset.name || "").toLowerCase();
+                    const location = (block.dataset.location || "").toLowerCase();
+                    const price = Number(block.dataset.price || 0);
+                    const facilities = (block.dataset.facilities || "").toLowerCase();
+                    const blockText = block.textContent.toLowerCase();
+
+                    const searchMatch = searchValue === "" || name.includes(searchValue) || blockText.includes(searchValue);
+                    const locationMatch = selectedLocation === "" || location.includes(selectedLocation);
+                    const facilityMatch = selectedFacility === "" || facilities.includes(selectedFacility);
+
+                    let priceMatch = true;
+                    if (selectedPrice === "low") priceMatch = price < 700000;
+                    if (selectedPrice === "mid") priceMatch = price >= 700000 && price < 800000;
+                    if (selectedPrice === "high") priceMatch = price >= 800000;
+
+                    if (searchMatch && locationMatch && facilityMatch && priceMatch) {
+                        block.style.display = "block";
+                        visibleCount++;
+                    } else {
+                        block.style.display = "none";
+                    }
+                });
+
+                noResults.hidden = visibleCount > 0;
+            }
+
+            searchInput.addEventListener("input", filterHostels);
+            locationFilter.addEventListener("change", filterHostels);
+            priceFilter.addEventListener("change", filterHostels);
+            facilitiesFilter.addEventListener("change", filterHostels);
+
+            resetBtn.addEventListener("click", function () {
+                searchInput.value = "";
+                locationFilter.value = "";
+                priceFilter.value = "";
+                facilitiesFilter.value = "";
+                filterHostels();
+            });
+        });
+    </script>
+</body>
+</html>

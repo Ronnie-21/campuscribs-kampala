@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Hostel Owner | CampusCribs Kampala</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../images/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <!-- MASTER NAVIGATION -->
+    <header>
+        <div class="logo"><div class="logo">CampusCribs Kampala</div></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="index.html">Find a Hostel</a></li>
+                <li><a href="../owners/index.html">List Your Hostel</a></li>
+                <li><a href="../about.html">About Us</a></li>
+                <li><a href="../faq.html">FAQ</a></li>
+                <li><a href="../contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENT AREA -->
+    <main class="hostel-details-container">
+        <section style="max-width: 600px; margin: 0 auto; background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+            <h1 style="color: #0f2a5c; text-align: center; margin-bottom: 10px;">Contact Hostel Management</h1>
+            <p style="text-align: center; color: #555; margin-bottom: 25px; font-size: 14px;">Fill out your inquiry below and the owner will get back to you regarding room availability and pricing.</p>
+            
+            <form action="https://formsubmit.co/youremail@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="New Student Hostel Inquiry">
+                <input type="hidden" name="_captcha" value="false">
+
+                <div style="margin-bottom: 15px; text-align: left;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 5px;">Select Hostel <span>*</span></label>
+                    <select name="hostel_name" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; font-family: inherit;">
+                        <option value="" disabled selected>- Select option -</option>
+                        <option value="University Courts">University Courts</option>
+                        <option value="Laxy Courts">Laxy Courts</option>
+                        <option value="Biko Hostel">Biko Hostel</option>
+                    </select>
+                </div>
+
+                <div style="margin-bottom: 15px; text-align: left;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 5px;">Your Full Name <span>*</span></label>
+                    <input type="text" name="student_name" required placeholder="e.g. Kiwanuka Benedicto" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+                </div>
+
+                <div style="margin-bottom: 15px; text-align: left;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 5px;">Your Email or Phone Number <span>*</span></label>
+                    <input type="text" name="student_contact" required placeholder="e.g. you@example.com / +256..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+                </div>
+
+                <div style="margin-bottom: 20px; text-align: left;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 5px;">Your Message / Inquiry <span>*</span></label>
+                    <textarea name="message" rows="4" required placeholder="Are single rooms or shared rooms available for next semester?" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; font-family: inherit;"></textarea>
+                </div>
+
+                <button type="submit" class="button" style="width: 100%; padding: 12px; cursor: pointer;">Send Inquiry to Owner →</button>
+            </form>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="index.html" style="color: #2563eb; text-decoration: none; font-size: 14px;">← Back to Hostel List</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy; 2026 CampusCribs Kampala | Group 9. All Rights Reserved.</p>
+
+        <p>
+            <a href="../contact.html">Contact Us</a> |
+            <a href="../privacy.html">Privacy Policy</a>
+        </p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,760 @@
+/* ========================================================== */
+/* 1. HOME PAGE STYLES                                        */
+/* Assigned to: Kiwanuka Benedicto (VU-BCD-2607-5275-DAY)     */
+/* Presentation Focus: Home Page                              */
+/* Affects: Home-specific layout components and sections.     */
+/* ========================================================== */
+.home-butoons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.hero {
+  background: linear-gradient(rgba(15, 42, 92, 0.85), rgba(15, 42, 92, 0.85)), url('../images/hero-bg.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.hero p {
+  font-size: 16px;
+  max-width: 700px;
+  margin: 0 auto 25px auto;
+  color: #dbe4ff;
+  line-height: 1.5;
+}
+
+
+/* ========================================================== */
+/* 2. GLOBAL CSS, SHARED STYLESHEET & UI DESIGN SYSTEM        */
+/* Assigned to: Kisakye Isaac (VU-BCD-2607-1924-DAY)          */
+/* Presentation Focus: Global CSS, Layout & Colors            */
+/* Affects: Root variables, theme modes, global resets, body, */
+/* headers, navigation, containers, and universal buttons.    */
+/* ========================================================== */
+:root {
+  --bg: #efedf1;
+  --surface: #d4e3fddd;
+  --text: #1b2430;
+  --muted: #5a6677;
+  --line: #7fa1d28d;
+  --accent: #bf7f1f;
+  --primary: #0f2a5c;
+  --heading: #0f2a5c;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #121f1c;
+    --surface: #fcfcfc;
+    --text: #e8edf4;
+    --muted: #9aa7b8;
+    --line: #2f3a4a;
+    --accent: #6ea8fe;
+    --heading: #9ec1ff;
+    color-scheme: light;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', Arial, Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px 10px;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: var(--heading);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.container {
+  display: block;
+  gap: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 15px;
+  flex-wrap: wrap;
+}
+
+.container:has(> .info) {
+  display: flex;
+}
+
+.container:has(> .info) form {
+  flex: 2 1 320px;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 10px;
+}
+
+main p,
+main ul {
+  margin-bottom: 14px;
+}
+
+main ul {
+  padding-left: 25px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 25px 0;
+}
+
+nav {
+  background: var(--primary);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.logo {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 15px;
+}
+
+nav a.active {
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+header:has(nav) {
+  background: var(--primary);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+header:has(nav) nav {
+  padding: 0;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button {
+  display: none;
+  color: white;
+  border: 1px solid white;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.2s ease;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #1d4ed8;
+}
+
+.button-secondary:hover {
+  background-color: #475569;
+}
+
+.buttton-secondary:hover {
+  background-color: #334155;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  margin-top: 18px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #1d4ed8;
+}
+
+
+/* ========================================================== */
+/* 3. FIND A HOSTEL PAGE & SEARCH/FILTER CONTROLS             */
+/* Assigned to: Bamwesigye Ronnie (VU-BSF-2603-1322-DAY)      */
+/* Presentation Focus: Find a Hostel Page Grid & Filters      */
+/* Affects: Styles search inputs, filter dropdown elements,   */
+/* and the responsive catalog layout grid.                    */
+/* ========================================================== */
+.filter-section,
+.search-section {
+  background-color: var(--surface);
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 35px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--line);
+}
+
+.filters {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.filters select,
+.search-box input[type="text"] {
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  flex: 1;
+  min-width: 180px;
+  font-size: 14px;
+  background-color: var(--surface);
+  color: var(--text);
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.search-box button {
+  background-color: var(--primary);
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.hostel-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.hostel-card {
+  background-color: var(--surface);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--line);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.hostel-card:hover {
+  transform: translateY(-5px);
+}
+
+.hostel-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.hostel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hostel-info {
+  padding: 20px;
+}
+
+.hostel-info h3 {
+  color: var(--heading);
+  margin-bottom: 8px;
+}
+
+.hostel-info p {
+  color: var(--muted);
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.hostel-info .button {
+  display: block;
+  margin-top: 10px;
+}
+
+
+/* ========================================================== */
+/* 4. HOSTEL DETAILS BREAKDOWN & AMENITIES LIST               */
+/* Assigned to: Aliganyira Barnabus Joses (VU-BCD-2607-3307-DAY)*/
+/* Presentation Focus: Hostel Details & Room Breakdown        */
+/* Affects: Styles detailed room spec tables, facility icon   */
+/* grids, image cards, and amenity list layouts.              */
+/* ========================================================== */
+.hostel-details-container {
+  display: block;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.hostel-details-container section {
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+.hostel-details-container hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+  width: 100%;
+  margin: 30px 0;
+}
+
+.hostel-details-container .intro-text {
+  max-width: 650px;
+  margin: 0 auto 20px auto;
+  color: var(--muted);
+  font-size: 16px;
+  text-align: left;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin: 24px 0;
+}
+
+.facility-grid {
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+.card {
+  margin: 0;
+  text-align: center;
+  padding: 15px;
+  background: var(--surface);
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.card figcaption {
+  color: var(--text);
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.facility-icon {
+  display: block;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin: 0 auto 10px;
+}
+
+.room-img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin: 0 auto 10px;
+}
+
+.fee-table {
+  width: 100%;
+  max-width: 700px;
+  border-collapse: collapse;
+  margin: 30px auto 0;
+  background: var(--surface);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.fee-table caption {
+  color: var(--heading);
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.fee-table th,
+.fee-table td {
+  border: 1px solid var(--line);
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.fee-table th {
+  background-color: var(--line);
+  color: var(--heading);
+}
+
+.benefits-list {
+  display: inline-block;
+  text-align: left;
+  margin: 10px auto 25px;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.benefits-list li {
+  margin-bottom: 8px;
+}
+
+
+/* ========================================================== */
+/* 5. OWNER REGISTRATION & HOSTEL SUBMISSION FORMS            */
+/* Assigned to: Lubuuka Najjibu (VU-BCD-2607-2647-DAY)         */
+/* Presentation Focus: Owner Registration & Submission Forms  */
+/* Affects: Form layout wrappers, field inputs, dropdowns,    */
+/* file upload containers, and dashboard management views.    */
+/* ========================================================== */
+form {
+  background: var(--surface);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--line);
+}
+
+label {
+  display: block;
+  margin-top: 14px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text);
+}
+
+label span {
+  color: red;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 11px;
+  margin-top: 6px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  background: var(--surface);
+  color: var(--text);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+
+/* ========================================================== */
+/* 6. LIST YOUR HOSTEL PAGE                                   */
+/* Assigned to: Aruho Emmanuel (VU-BAV-2603-0495-DAY)         */
+/* Presentation Focus: List Your Hostel Onboarding Page       */
+/* Affects: Formats promotional feature cards, benefit grids, */
+/* and call-to-action layout blocks for property owners.      */
+/* ========================================================== */
+.onboarding-hero {
+  background-color: var(--primary);
+  color: white;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.benefit-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.benefit-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+
+/* ========================================================== */
+/* 7. FAQ PAGE & W3C QUALITY ASSURANCE                      */
+/* Assigned to: Kubakurungi Benon (VU-BCD-2607-1387-DAY)      */
+/* Presentation Focus: FAQ Page & W3C Quality Assurance       */
+/* Affects: Styles interactive collapsible question accordion */
+/* boxes with custom plus/minus indicator toggle symbols.     */
+/* ========================================================== */
+details {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+summary {
+  cursor: pointer;
+  padding: 16px 18px;
+  font-weight: 600;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  color: var(--text);
+}
+
+
+summary::after {
+  content: "+";
+  color: var(--accent);
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+details[open] summary::after {
+  content: "\2212";
+}
+
+summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+details p {
+  margin: 0;
+  padding: 0 18px 18px;
+  color: var(--muted);
+}
+
+
+/* ========================================================== */
+/* 8. ABOUT US PAGE                                           */
+/* Assigned to: Ajak Ibrahim Khalil (VU-BAD-2607-5465-DAY)    */
+/* Presentation Focus: About Us Page & Documentation          */
+/* Affects: Layout styling for team bios and project research */
+/* overview summary presentations.                            */
+/* ========================================================== */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.team-member-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 20px;
+    text-align: center;
+}
+
+.team-member-card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+
+/* ========================================================== */
+/* 9. CONTACT & PRIVACY PAGES                                 */
+/* Assigned to: Nambalirwa Sharifah (VU-BCD-2607-4937-DAY)    */
+/* Presentation Focus: Contact & Privacy Pages                */
+/* Affects: Styles contact info boxes, dynamic error alert   */
+/* notification boxes, and data protection privacy cards.     */
+/* ========================================================== */
+.info {
+  flex: 1;
+  min-width: 250px;
+  background: var(--primary);
+  color: white;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.info h3 {
+  margin-bottom: 10px;
+}
+
+.info p {
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #dbe4ff;
+}
+
+.error-box {
+  display: none;
+  background: #fff3cd;
+  border: 1px solid #ffcc00;
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 14px;
+  color: #856404;
+}
+
+.error-box h4 {
+  font-size: 14px;
+}
+
+.privacy-note {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 12px;
+}
+
+.privacy-card {
+  background: var(--surface);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--line);
+  margin: 0 auto;
+}
+
+.privacy-card h3 {
+  color: var(--heading);
+  margin-bottom: 10px;
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+
+.privacy-card h3:first-child {
+  margin-top: 0;
+}
+
+.privacy-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* ========================================================== */
+/* RESPONSIVE LAYOUT BREAKPOINTS                              */
+/* Managed by Group 9 Development Team                        */
+/* Affects: Adapts grids and containers for mobile viewports. */
+/* ========================================================== */
+@media (max-width: 900px) {
+  .hostel-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .hostel-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  header:has(nav) nav {
+    display: none;
+    width: 100%;
+  }
+
+  #menutoggle:checked+nav {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+  }
+
+  .nav-links a {
+    margin-left: 0;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--muted);
+  font-size: 13px;
+}
